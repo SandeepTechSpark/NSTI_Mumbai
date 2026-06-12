@@ -1,0 +1,68 @@
+<html>
+<body>
+ <h2> Addition of two Matrix </h2>
+<script>
+// ===================== Variable Initialization ====================
+  var i,j,a,m,n,b,p,q;
+  // ========================= Read Row & Column Litmits of both Matrix  ========================
+m = parseInt(prompt("Enter the First Matrix Row limit : "));
+n = parseInt(prompt("Enter the First Matrix Column limit : "));
+p = parseInt(prompt("Enter the Second Matrix Row limit : "));
+q = parseInt(prompt("Enter the Second Matrix Column limit : "));
+// ========== Object Creation and Momory Space Allocation ==========
+	if(m==p && n==q) {
+		a = new Array(m);
+		b = new Array(p);
+		c = new Array(m);
+			for(i=0;i<m;i++) {
+				a[i] = new Array(n);
+				b[i] = new Array(q);
+				c[i] = new Array(n);
+			}
+	
+// ================= Read the First Matrix Elements =================
+	for(i=0;i<m;i++) {
+		for(j=0;j<n;j++) {
+			a[i][j] = parseInt(prompt("Enter the First Matrix Elements : "));
+		}
+	}
+// ================ Read the Second Matrix Elements =================
+	for(i=0;i<m;i++){
+		for(j=0;j<n;j++) {
+			b[i][j] = parseInt(prompt("Enter the Second Matrix Elements : "));
+		}
+	}
+// ============== Sum of Both Matrix ======================
+	for(i=0;i<m;i++) {
+		for(j=0;j<n;j++) {
+			c[i][j] = a[i][j] + b[i][j];
+		}
+	}
+// ====+++++++++++ Display The All (A,B & C) Matrices ++++++++==============
+	// A Matrix :
+	document.write("<hr>First Matrix is : <br>");
+	for(i=0;i<m;i++) {
+		for (j=0;j<n;j++) {
+			document.write(a[i][j] + " ");
+		} document.write("<br>");
+	}
+	// B Matrix : 
+	document.write("<hr>Second Matrix is : <br>");
+for (i = 0; i < m; i++) {
+	for (j = 0; j < n; j++) {
+	document.write(b[i][j] + " ");
+	} document.write("<br>");
+}
+// C Matrix : Resultant : 
+	document.write("<hr>Resultant Matrix C (A+B) is : <br>");
+for (i = 0; i < m; i++) {
+	for (j = 0; j < n; j++) {
+		document.write(c[i][j] + " ");
+	} document.write("<br>");
+} document.write("<hr>");
+} else { 
+	document.write("Something Went Wrong!! Please Enter the Ccrrect Input!");
+}
+	</script>
+</body>
+</html>

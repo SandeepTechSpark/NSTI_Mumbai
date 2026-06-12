@@ -1,0 +1,51 @@
+
+<head><title>Matrix Diagonal</title></head>
+<body>
+  <hr><h2>Matrix Elements in Diagonal Shape </h2><hr>
+  <script>
+ // ========== ----------- Variable Declaration Initialization --------- ===========
+    let arr,m,n;
+  m = parseInt(prompt("Enter the Matrix Row Limit : "));
+  n = parseInt(prompt("Enter the Matrix Column Limit : "));
+  
+  if(m == n ) {
+    // ------ Memory Allocation for Array Elements -------
+ arr = new Array(m);
+  for (i=0;i<m;i++) arr[i] = new Array(n);
+  // -- Reading Of Array Elements
+    for(i=0;i<m;i++) {
+       for(j=0;j<n;j++) {
+         arr[i][j] = parseInt(prompt("Enter Your Array Elements : "));
+       }
+    }
+   // Display Original Array : 
+     document.write("<hr><b>Original Array : </b><br> ");
+    for(i=0;i<m;i++) {
+       for(j=0;j<n;j++) {
+    document.write(arr[i][j]+"&nbsp;&nbsp");
+       } document.write("<br>");
+    }         
+ // Process to Display Matrix Elements in First Diagonal Shape
+    document.write("<hr><b> Matrix Elements in First Diagonal Shape : </b><br> ");
+    for(i=0;i<m;i++) {
+       for(j=0;j<n;j++) {
+         if ( i === j) document.write(arr[i][j] + "&nbsp;&nbsp");
+         else document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+       } document.write("<br>");
+    }
+      document.write("<hr><hr>");
+ // Process to Display Matrix Elements in Secondary Diagonal Shape
+      document.write("<hr><b> Matrix Elements in Secondary Diagonal Shape : </b><br> ");
+    for(i=0;i<m;i++) {
+       for(j=0;j<n;j++) {
+         if ( i+j === n-1) document.write(arr[i][j] + "&nbsp;&nbsp");
+         else document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+       } document.write("<br>");
+    }
+  } else document.write("Matrix Diagonal Not Possible!");
+  
+  </script>
+  <hr>
+</body>
+  </html>
+  

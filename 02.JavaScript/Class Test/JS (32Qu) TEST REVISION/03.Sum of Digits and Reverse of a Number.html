@@ -1,0 +1,23 @@
+<html>
+<head><title> Sum & Rev </title></head>
+<body>
+  <h2> Sum and Reverse Digits of a Number </h2> 
+  <hr>
+  <script>
+// ++++++++++++++++++++++ Variable Declaration and Initialization +++++++++++
+    let n, sum = 0, rev = 0, digit;
+// ++++++++++++++ Input Reading from User and Print inputs ++++++++++++++++++++
+    n = parseInt(prompt("Enter a Number : "));
+    document.write("Your enter number is " + n + "<hr>");
+// ++++++++++++++++++++++ Process to get result ++++++++++++++++++++++++++
+   while(n>0){
+     digit = n % 10;
+     rev = rev * 10 + digit;
+     sum = sum + digit;
+     n = parseInt (n / 10);
+   }
+// +++++++++++++++++++++++++ Display the output ++++++++++++++++++++++++
+  document.write("<hr> Sum of digits : " + sum + "<br> Reverse of digits : " + rev + "<hr>");  
+  </script>
+</body>
+</html>

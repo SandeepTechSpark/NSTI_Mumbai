@@ -1,0 +1,22 @@
+<html>
+<head><title>Palindrome or not</title></head>
+<body>
+  <hr>
+  <h2>Checking the Given String is a Palindrome or Not </h2>
+  <hr>
+  <script>
+  // ========================== variable declaration ===========================
+    let str,revStr = "", l;
+ // ========================== Input Reading from User =========================
+    str = prompt("Enter the String to be checked : " );
+    document.write("Your Given String = " + str + "<hr>");
+ // ========================= process to Check =================================
+    l = str.length;
+    for(let i = l-1; i>=0; i--) revStr = revStr + str.charAt(i);
+      // ++++++++++++++ check if Palindrome or not +++++++++++++++++
+    if (str.toLowerCase() === revStr.toLowerCase()) {
+    document.write("Your Given String <b><u>" + str + "</u></b> is Palindrome<hr>");}
+    else document.write("<h3>Result : </h3><b><u>" + str + "</u></b>  is not Palindrome<hr>");
+  </script>
+</body>
+</html>

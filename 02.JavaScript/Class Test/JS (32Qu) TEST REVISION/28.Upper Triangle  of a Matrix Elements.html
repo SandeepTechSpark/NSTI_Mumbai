@@ -1,0 +1,92 @@
+<!-- <html>
+<head><title>Upper Triangle</title></head>
+<body>
+  <hr><h2>Elements of Matrix in shape of Upper Triangle</h2><hr>
+  <script>
+ // ========== ----------- Variable Declaration Initialization --------- ===========
+    let arr,m,n;
+  m = parseInt(prompt("Enter the Matrix Row Limit : "));
+  n = parseInt(prompt("Enter the Matrix Column Limit : "));
+  // ------ Memory Allocation for Array Elements -------
+  if(m == n) {
+ arr = new Array(m);
+  for (i=0;i<m;i++) arr[i] = new Array(n);
+  // -- Reading Of Array Elements
+    for(i=0;i<m;i++) {
+       for(j=0;j<n;j++) {
+         arr[i][j] = parseInt(prompt("Enter Your Array Elements : "));
+       }
+    }
+   // Display Original Array : 
+     document.write("<hr><b>Original Array : </b><br> ");
+    for(i=0;i<m;i++) {
+       for(j=0;j<n;j++) {
+    document.write(arr[i][j]+"&nbsp;&nbsp");
+       } document.write("<br>");
+    }         
+ // Process to Display Array Elements in Upper Trianguler Shape
+    document.write("<hr><b>Upper Trianguler Matrix : </b><br> ");
+    for(i=0;i<m;i++) {
+       for(j=0;j<n;j++) {
+    if(i<=j) document.write(arr[i][j]+"&nbsp;&nbsp");
+    else document.write("&nbsp;&nbsp;&nbsp;&nbsp");
+       }document.write("<br>");
+   }
+  } else document.write("Matrix Elements in Upper Triangular Shape not Possible!");
+  </script>
+      <hr>
+</body>
+</html>-->
+
+<html>
+<head><title>Upper Triangle</title></head>
+<body>
+  <hr><h2>Elements of Matrix in shape of Upper Triangle Using Function </h2><hr>
+  <script>
+ // ========== ----------- Variable Declaration Initialization --------- ===========
+    let arr,m,n;
+  m = parseInt(prompt("Enter the Matrix Row Limit : "));
+  n = parseInt(prompt("Enter the Matrix Column Limit : "));
+  
+  if (m == n) {
+  // ------ Memory Allocation for Array Elements -------
+ arr = new Array(m);
+  for (i=0;i<m;i++) arr[i] = new Array(n);
+    
+  // --Function for Array Elements Reading
+ function readMatrix (arr,m,n) {
+    for(i=0;i<m;i++) {
+       for(j=0;j<n;j++) {
+         arr[i][j] = parseInt(prompt("Enter Your Array Elements : "));
+       }
+    }
+ }
+   // Function for Display Original Array : 
+ function displayMatrix(arr,m,n) {   
+    for(i=0;i<m;i++) {
+       for(j=0;j<n;j++) {
+    document.write(arr[i][j]+"&nbsp;&nbsp");
+       } document.write("<br>");
+    }         
+ }
+ //Function for Process to Display Matrix Elements in Upper Trianguler Shape
+    
+  function triMatrix (arr,m,n) {  
+    for(i=0;i<m;i++) {
+       for(j=0;j<n;j++) {
+    if(i<=j) document.write(arr[i][j]+"&nbsp;&nbsp");
+    else document.write("&nbsp;&nbsp;&nbsp;&nbsp");
+       } document.write("<br>");
+     }
+  }
+    
+    readMatrix (arr,m,n);
+    document.write("<hr><b>Original Array : </b><br> ");
+    displayMatrix (arr,m,n);
+    document.write("<hr><b>Upper Trianguler Matrix : </b><br> ");
+    triMatrix (arr,m,n);
+ } else document.write("Matrix Elements in Upper Triangular Shape not Possible!");   
+  </script>
+      <hr>
+</body>
+</html>

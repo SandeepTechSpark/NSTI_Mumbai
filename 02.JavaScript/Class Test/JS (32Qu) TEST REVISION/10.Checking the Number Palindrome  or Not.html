@@ -1,0 +1,24 @@
+<html>
+<head><title> Palindrome Number </title></head>
+<body>
+  <hr>
+  <h2>Checking the Given Number is a Palindrome Number or Not </h2>
+  <hr>
+  <script>
+ // ========================= Variable Declaration & Initialization ======================
+    var num, rev = 0, dup, digit;
+ // ======================== Input Reading from the User =================================
+    num = parseInt(prompt("Enter the Number : " ));
+    dup = num;
+    document.write("Your Given Number  = " + dup + "<hr><b>Result : </b>");
+  // ========================= Process for Checking =====================================
+    while(num>0){
+      digit = num % 10;
+      rev = (rev * 10) + digit;
+      num = parseInt(num/10);
+    }
+ // ============================= Display output ===========================
+    document.write(dup == rev ? "It's a Palindrome Number<hr>" : "It's Not a Palindrome Number<hr>");
+  </script>
+</body>
+</html>

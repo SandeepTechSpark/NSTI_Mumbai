@@ -1,0 +1,57 @@
+<html>
+<head><title>Binary Search</title></head>
+<body>
+  <hr><h2>Binary Search</h2><hr>
+  <script>
+  // ============== Variable Declareation ================
+    let arr, n;
+  // =================== User Input Reading & Memory Allocation ======================
+    n = parseInt(prompt("Enter your Array Limit (N) : "));
+    arr = new Array(n);
+   for(i=0;i<n;i++) arr[i] = parseInt(prompt("Enter the Array Eliments : "));
+  // ==================== Display Original Array ============================
+     document.write("Original Array is : [ ");
+     for(i=0;i<n;i++) {
+       document.write( arr[i] + " ");
+     } document.write(" ] <hr>");
+       
+       
+//  +++++++++++++++++++++++++++++++++ Process for Sorting ++++++++++++++++++++++++++++++
+       
+       
+     // ------------------- in Ascending Order ---------------------
+       for(i=0;i<n-1;i++) {
+         for(j=0;j<n-i-1;j++) {
+           if(arr[j] > arr[j+1]) {
+             let temp = arr[j];
+             arr[j] = arr[j+1];
+             arr[j+1] = temp;
+           }
+         }
+       }
+// ======== Display Sorted Array ============
+            document.write("Array is in Asending Order : [ ");
+         for(i=0;i<n;i++) document.write(arr[i] + " ");
+            document.write(" ] <hr>");
+ // =========================  process to Binary Search =============
+      let searchkey = parseInt(prompt("Enter the Search Key ; "));
+           document.write("Search Key is : " + searchkey + "<hr>");
+      let initial = 0, final= (n-1), mid, flag = 0;
+           while(initial <= final){
+             mid = Math.floor((initial + final)/2);
+             if (searchkey > arr[mid]) { 
+               initial = mid +1;
+             } else if (searchkey < arr[mid]) {
+               final = mid -1;
+             } else { flag = 1;
+                      break;
+             }
+           }
+            if (flag) {
+              document.write("<hr>Search Key ("  + searchkey + ") is Found at Position : " + (mid +1)+" in shorted Array");
+            } else { document.write("<hr>Search Key (" + searchkey + ") is not found in shorted Array");
+        }
+      document.write("<hr>");                 
+</script>
+</body>
+</html>

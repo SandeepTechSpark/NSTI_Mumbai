@@ -1,0 +1,24 @@
+<html>
+<head> 
+ <h1> Sum of Digits and Reverse digits  of the Number :</h1> <br><br>
+      </head>
+  <body>
+  <script>
+    // ++++++++++++ Input from User ++++++++++++++++
+ var num = parseInt(prompt("Enter Your Number : "));
+// ++++++++++ variable Initialization ++++++++++++++++
+    var digit, dup,  sum = 0, rev = 0;
+    dup = num;
+// +++++++++++++ Procdure +++++++++++++++++++
+    do {
+            digit = num % 10;
+             rev = rev *10 + digit;
+              num = parseInt (num/10);
+              sum += digit; 
+            } while (num>0);
+   //++++++++++++++++++ Display the Result ++++++++++++++++
+    document.write("Your Entered Number is : " + dup + "<br> Sum of digits of the Number  is : " + sum +
+    "<br> Reverse Disit of the Number is : " + rev);
+    </script>
+</body>
+</html>

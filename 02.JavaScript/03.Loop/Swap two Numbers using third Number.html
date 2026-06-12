@@ -1,0 +1,53 @@
+<!--
+<html>
+<head> 
+ <title>Swap of two Numbers</title>
+      </head>
+  <body>
+   <hr>
+   <h1> Swap of two Numbers using third Number :</h1>
+   <hr>
+  <script>
+// ++++++++ Declaration and Variable Initialization +++++++++++  
+   let num1 = parseInt(prompt("Enter the First Number : "));
+   let num2 = parseInt(prompt("Enter the Second Number : "));
+   let temp;
+   //+++++++++++++ Display before Swap +++++++++++
+    document.write("<b>Before Swap : </b><hr>");
+    document.write("First Number = " + num1 + " <br> Second Number = " + num2 +"<hr>");
+   // ++++++++ ++++ Process for Swaping +++++++++++++
+     temp = num1;
+      num1 = num2;
+      num2 = temp;
+  // ++++++++ ++++ Disp;ay after Swap +++++++++++++
+    document.write("<b>After Swap : </b><hr>");
+   document.write("First Number = " + num1 + " <br> Second Number = " + num2 +"<hr>");
+   </script>
+</body>
+</html> -->
+
+<html>
+<head><title>Swap of two Numbers</title></head>
+<body>
+ <hr>
+ <h2>Swap of two Numbers Using Third Variable</h2>
+ <hr>
+ <script>
+ // ========================= Variable Declaration ===========================
+    let num1,num2, temp;
+ // ========================= Input Reading from User ========================
+    num1 = parseInt(prompt("Enter the First Number : "));
+    num2 = parseInt(prompt("Enter the Second Number : "));
+ // ++++++++ Display Numbers before Swap ++++++++++++++++++++++ 
+    document.write("<b>Before Swap : </b>");
+    document.write("First Number = " + num1 + " <b> ||  </b>" + " Second Number = " + num2 + "<hr>");
+ // ==================== Process for Swaping =====================
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+ // ++++++++++++++ Display Numbers After Swap +++++++++++++++++++++++++
+    document.write("<b>After Swap : </b>");
+    document.write("First Number = " + num1 + " <b> ||  </b>" + " Second Number = " + num2 + "<hr>");
+ </script>
+</body>
+</html>

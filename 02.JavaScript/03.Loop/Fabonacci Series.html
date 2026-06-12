@@ -1,0 +1,45 @@
+<html>
+<head> 
+ <title>Fabonacci Series : </title>
+      </head>
+  <body>
+   <h1>Fabonacci Series  :</h1> <br><br>
+  <script>
+// ++++++++ Declaration and Variable Initialization +++++++++++  
+   let n, a = 0, b = 1;
+   n = parseInt(prompt(" Enter the Series Limit : "));
+    document.write(a + ", "+ b+ ", ");
+   // ++++++++ ++++ Process +++++++++++++
+   for ( i = 2; i <= n; i++) {
+    let c = a + b;
+    if (c<=n) {
+    document.write(c + " ");
+     a = b; 
+     b = c; }
+   } 
+ </script>
+</body>
+</html>
+<html>
+<head><title>Fabonacci Series</title></head>
+<body>
+ <hr>
+ <h2>Fabonacci Series Generating Upto limit(n)</h2>
+ <hr>
+ <script>
+// ===================== Variable Declaration and Input Reading =========================
+    var a, b, c, limit;
+    limit = parseInt(prompt("Enter your limit : "));
+    a = -1;
+    b = 1;
+    c = 0;
+// ============================== Process to Generate ====================================
+    while(c<limit) {
+     c = a + b;
+     a = b;
+     b = c;
+     if(c<=limit) document.write(c + " ")
+    }
+ </script>
+</body>
+</html>

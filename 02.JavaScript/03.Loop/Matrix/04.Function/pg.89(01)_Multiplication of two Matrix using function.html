@@ -1,0 +1,74 @@
+<html>
+<head><title>Multiplication of two Matrices</title></head>
+<body>
+  <hr><h2>Multiplication of Two Matrices Using Function</h2><hr>
+  <script>
+  // -----------================== Function Creation ======================----------------
+        // Read Matrix
+    function readMatrix (a,m,n) {
+  var i,j
+    for(i=0;i<m;i++) {
+      for(j=0;j<n;j++) {
+        a[i][j] = parseInt(prompt("Enter the First Matrix Elements : "));
+      }
+    }
+  }
+      
+    // Display Matrix
+  function displayMatrix (a,m,n) {
+    var i,j
+    for(i=0;i<m;i++) {
+      for(j=0;j<n;j++) {
+        document.write(a[i][j] + " ");
+      }document.write("<br>");
+    } 
+  }
+  
+   // Multiplication of Matrices
+  function mulMatrix (a,b,c,m,n,p,q) {
+    var i,j
+    for(i=0;i<m;i++) {
+      for(j=0;j<q;j++) {
+        c[i][j] = 0;
+       for(let k=0;k<n;k++) {
+         c[i][j] += (a[i][k] * b[k][j]);
+          }         
+      }
+    }
+  }
+  </script>
+  
+  <script>
+// ------================= Variable Declaration & Initialization ==================--------
+  let a,b,c,m,n,p,q;
+    // ========== Input Reading from User ================
+   m = parseInt(prompt("Enter the first Matrix Row Limit : "));
+   n = parseInt(prompt("Enter the first Matrix Column Limit : "));
+   p = parseInt(prompt("Enter the Second Matrix Row Limit : "));
+   q = parseInt(prompt("Enter the first Matrix Column Limit : "));
+   // ================== Memory Allocation =================
+  if(n == p) {
+   a = new Array(m);
+   b = new Array(p);
+   c = new Array(m);
+  for (i=0;i<m;i++) {
+    a[i] = new Array(n);
+    b[i] = new Array(q);
+    c[i] = new Array(n);
+  }
+    
+ // Process by Fuction Calling
+      readMatrix(a,m,n);
+      readMatrix(b,p,q);
+      mulMatrix(a,b,c,m,n,p,q);  
+  document.write("First Matrix : <br>");
+      displayMatrix(a,m,n);
+  document.write("Second Matrix : <br>");
+      displayMatrix(b,p,q);
+  document.write("<hr>Resultant Matrix (C = A * B)  : <br>");
+      displayMatrix(c,m,q);
+  } else document.write("Multiplication not Possible!");
+  </script>
+  <hr>
+</body>
+</html>

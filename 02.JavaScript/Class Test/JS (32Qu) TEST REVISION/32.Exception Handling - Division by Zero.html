@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Exception Handling (Division by zero):</title>
+  </head>
+
+  <body>
+    <h2>Exception Handling (Division by zero)</h2>
+    <script>
+      try {
+        var a = parseInt(prompt("Enter First Number (A) : "));
+        var b = parseInt(prompt("Enter Second Number (B) : "));
+
+        if (b == 0) {
+          throw new Error("Division by zero is not possible.");
+        }
+
+        var result = a/b;
+        document.write("Result: " + result);
+      } catch (e) {
+        alert("There is an error which: " + e.message);
+      } finally {
+        document.write("<br>The try-catch block is ended.");
+      }
+    </script>
+  </body>
+</html>
+
+<html>
+<head><title>Exception Handling</title></head>
+<body>
+  <hr><h2>Exception Handling(Division By Zere)</h2><hr>
+<script>
+try{
+// Value Reading--------------------
+  var a = parseInt(prompt("Enter Your First Number (A) : "));
+  var b = parseInt(prompt("Enter Your Second Number(B) : "));
+  
+ if (b==0) {
+  throw new Error("Division by Zero is not possible");
+ }  
+  
+ var result = a/b;
+  document.write("Result : " + result + "<br>");
+} catch (e) {
+              alert ("There is an error which - "+e.message);
+} finally {
+ document.write("<br> The Try-Catch Block is Ended");
+}
+</script>
+</body>
+</html>

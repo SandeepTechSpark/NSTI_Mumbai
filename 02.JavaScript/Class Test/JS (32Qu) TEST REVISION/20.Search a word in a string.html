@@ -1,0 +1,34 @@
+<html>
+<head><title> Searching a Sub-String</title></head>
+<body>
+  <hr>
+  <h2>Searching a sumstring in main given string</h2>
+  <hr>
+  <script>
+  // variable declaration 
+   let str1,str2,l,k,match, found = false;
+  // Input reading from user 
+  let j;  
+  str1 = prompt("Enter the main String : " );
+    str2 = prompt("Enter the subString to be searched : ");
+    l = str1.length;
+    k = str2.length;
+  for(let i=0; i<=l-k; i++) {
+    match = true;
+    for(j =0; j<k; j++) {
+      if(str1.charAt(i+j) !== str2.charAt(j)) {
+        match = false;
+        break;
+      }
+    }
+      if(match) {
+        document.write("the substring " + str2 + " is found at position " + (i+j));
+        found = true;
+        break;
+      }
+  } if(!found) {
+    document.write("the substring " + str2 + " is not found in " + str1 + " "); 
+  }
+  </script>
+</body>
+</html>

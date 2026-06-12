@@ -1,0 +1,26 @@
+<html>
+<head> </head>
+<body>
+<p> Power of <b> N <sup> th </sup></b> Using Function : </p>
+<hr>
+<script>
+// ++++++++++++ function Creation +++++++++++++
+function bp(base,power) {
+	//return Math.pow(base,power);
+	result = Math.pow(base,power);
+}
+// +++++++++++++ Variable Initialization +++++++++++++++
+ //let base,power;
+	let base,power,result ;
+//  +++++++++++++++ Value Reading +++++++++++++++++++
+ base = parseInt(prompt("Enter the Base Value : "));
+ power = parseInt(prompt("Enter the Power Value : "));
+// =============== Display OutPut ============
+ document.write("Base = " + base + "<br> Power = " + power + "<hr>");
+ 							//let result = bp(base,power);
+	       bp(base,power);
+ 							document.write("Your Result = " + result);
+ 							document.write("<hr>");
+</script>
+</body>
+<html>

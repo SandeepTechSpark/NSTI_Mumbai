@@ -1,0 +1,62 @@
+<!--
+<html>
+<head><title>ArithOperSwitch</title></head>
+<body>
+  <hr>
+  <h2>Arithmetic Operators Using Switch</h2>
+  <script>
+  // ================= Variable Declaration & Initialization ================
+    let a,b,operator, result;
+  // ====================== Input Reading from User =======================
+    a = parseInt(prompt("Enter the First Operand A : "));
+    operator = prompt("Enter an Operator (+,-,*,/,%,** etc) : ");
+    b = parseInt(prompt("Enter the Second Operand B : "));
+  // ==================== Perform Operation Using Swtch =====================
+    switch(operator){
+      case "+" : result = a + b; break;
+      case "-" : result = a-b; break;
+      case "*" : result = a*b; break;
+      case "/" : result = a/b; break;
+      case "%" : result = a%b; break;
+      case "**" : result = a**b; break;
+      default : result = "Invilid Operator!! Please Choose an Appropriate Operator";
+    }
+  // ==================== Display Output in Simple Form ==========================
+    document.write("<hr><b>Result : <br></b>");
+    document.write(a + " " + operator + " " +  b + " = " + result+"<hr>");
+  </script>
+</body>
+</html> -->
+<!-- ============================= Same Code Practice Again ========================== --> 
+<html>
+<head><title>Arithmetic Operation</title></head>
+<body>
+  <h2>Arithmetic Operators Using Switch</h2>
+  <hr>
+  <script>
+// ==================== Variable Declaration & Initialization ===========================
+   var a,operator,b,result;
+// =======================Input Reading from the User ===================================
+   a        = parseInt(prompt("Enter the First Operand (A) : "));
+   operator = prompt("Enter any Operator (like +,-,*,/,%,**) : ");
+   b        = parseInt(prompt("Enter the Second Operand (B) : "));
+// ======================== Process for Switch =========================================
+   switch(operator) {
+     case "+" : result = a + b; break;
+     case "-" : result = a - b; break;
+     case "*" : result = a * b; break;
+     case "/" : if(b == 0 ) result = "Error! Cannot be divided by Zero";
+                else result = a / b; 
+                break;
+     case "%" : if(b == 0 ) result = "Error! Cannot be divided by Zero";
+                else result = a % b; 
+                break;
+     case "**" : result = a ** b; break;
+     default : result = "Invilid Operator!! Please Choose an Appropriate Operator";
+   }  
+// =========================== Display Result & Output =================================
+  document.write("<hr> Result : ");
+  document.write(a + " " + operator + " " + b + " = " + result + "<hr>");  
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head><title>Fibonacci Series</title></head>
+<body>
+  <hr>
+  <h2>Fibonacci Series of the Upto Entered Number(n)</h2>
+  <hr>
+  <script>
+  // ====================== Variable Declaration ==============================
+    var n, a = -1, b = 1;
+  // ======================== Reading & Printing the User's Input =============
+    n = parseInt(prompt("Enter the Value of N : "));
+  // ================= Process to Generate Fibonacee Series ====================
+     document.write("<hr><h3>Fibonacci Series : </h3><hr>");
+    for ( i = 1; i <= n; i++) {
+      let c = a + b;
+      document.write( c + ",");
+          a = b;
+          b = c;
+    }
+  </script>
+      <hr>
+</body>
+</html>

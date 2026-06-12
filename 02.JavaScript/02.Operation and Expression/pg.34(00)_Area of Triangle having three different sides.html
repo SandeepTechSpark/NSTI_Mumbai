@@ -1,0 +1,23 @@
+<html>
+<head><title>Area of Triangle</title></head>
+<body>
+  <hr>
+  <h2>Area of a Triangle having three different Sides</h2>
+  <hr>
+  <script>
+ // ====================== variable Declaration =====================
+    var a, b, c, area, s;
+ // ==================== Input Reading & Printing from User ====================
+    a = parseInt(prompt("Enter the First Side (A) : "));
+    b = parseInt(prompt("Enter the Second Side (B) : "));
+    c = parseInt(prompt("Enter the Third Side (C) : "));
+    document.write("A = " + a + " <br> B = " + b + " <br> C = " + c + "<hr>");
+ // ================ Semi-Perimiter Calculation ============================
+    s = (a+b+c)/2;
+ // ================= Area of Triangle Calculation =====================
+    area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+ // ======================= Display Result/ Output ================
+    document.write("<b>Result : </b> Area of Triangle = " + area.toFixed(2) + "<hr>");
+  </script>
+</body>
+</html>

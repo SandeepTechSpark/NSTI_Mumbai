@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DOM Qu.No 01 </title>
+</head>
+<body>
+	<h1> 01 - DOM form1.name.value</h1>
+</body>
+	<script type = "text/javaScript"> 
+		function printValue() {
+		var name = document.form1.name.value;
+			alert("Welcome: " + name);
+		}
+	</script>
+	<form name="form1">
+		Enter name : <input type="text" name="name"/>
+		<input type="Button" onclick = "printValue()" value ="print name">
+	</form>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head><title>Prime or not </title></head>
+<body>
+  <hr>
+  <h2>Checking a Number is Prime or Not </h2>
+  <hr>
+  <script>
+  // ======================== Variable Declaration ====================
+    let num, flag = false;
+  // ======================== Input Reading from User =================
+    num = parseInt(prompt("Enter a Number : "));
+  // +++++++++++++++++++ Display User input ++++++++++++++++++++++++++
+    document.write("Your Entered Number = " + num + "<hr> <b>Result : </b>");
+  // ================= Process to Check =======================
+    if(num<=1) document.write("It's not a Prime Number !");
+    else { for( i=2; i<=num/2; i++) {
+      if(num % i == 0) {
+        flag = true;
+        break;
+            }
+      }
+ 
+  // ========================== Display Output ========================
+      document.write(flag ? " It's not a Prime Number " : " It's a Prime Number ");
+    }      
+  </script>
+      <hr>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghazipur Smart City Dashboard</title>
+</head>
+<body bgcolor="whitesmoke" text="black" leftmargin="60" rightmargin="60">
+
+    <header>
+        <center>
+            <h1><font face="Verdana" color="darkred">GHAZIPUR DIGITAL INFORMATION HUB</font></h1>
+            <p><i>Real-time District Data & Heritage Portal</i></p>
+        </center>
+        <nav>
+            <center>
+                <hr color="darkred">
+                <a href="#stats">Statistics</a> | 
+                <a href="#heritage">Heritage Sites</a> | 
+                <a href="#feedback">Submit Feedback</a> | 
+                <a href="https://ghazipur.nic.in" target="_blank">Official Portal</a>
+                <hr color="darkred">
+            </center>
+        </nav>
+    </header>
+
+    <main>
+        <section id="stats">
+            <h2 align="center">District Statistical Profile (2026)</h2>
+            <table border="2" width="100%" cellpadding="15" cellspacing="0" bgcolor="white">
+                <thead bgcolor="darkred">
+                    <tr align="center">
+                        <th><font color="white">Category</font></th>
+                        <th><font color="white">Indicator</font></th>
+                        <th><font color="white">Data Value</font></th>
+                        <th><font color="white">Remarks</font></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3" align="center"><b>Demographics</b></td>
+                        <td>Total Population</td>
+                        <td>36.2 Lakhs</td>
+                        <td>Approx. 2021 Census</td>
+                    </tr>
+                    <tr>
+                        <td>Literacy Rate</td>
+                        <td>71.78%</td>
+                        <td>Increasing Yearly</td>
+                    </tr>
+                    <tr>
+                        <td>Total Area</td>
+                        <td>3,377 sq km</td>
+                        <td>Eastern UP Region</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="lightgrey">
+                            Data Source: <i>National Informatics Centre (NIC), Ghazipur</i>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <br><br>
+
+        <section id="heritage">
+            <h2>Explore Ghazipur Heritage</h2>
+            <details>
+                <summary><b>The Tomb of Lord Cornwallis (Click to Expand)</b></summary>
+                <p>Located in the heart of the city, this monument is a protected site under the Archaeological Survey of India (ASI). Lord Cornwallis died here in 1805 while serving as Governor-General.</p>
+            </details>
+            <br>
+            <details>
+                <summary><b>The Opium Factory</b></summary>
+                <p>Established in 1820, it is one of the oldest and largest legal opium factories in the world, exporting medicinal products globally.</p>
+            </details>
+        </section>
+
+        <br><br>
+
+        <section id="feedback">
+            <fieldset style="border: 2px solid darkred; padding: 20px;">
+                <legend><h3>Help Us Improve Our District</h3></legend>
+                <form>
+                    <pre>
+Enter Your Name : <input type="text" name="uname" required placeholder="Full Name">
+Select Block    : <input list="blocks" name="block" placeholder="Type to search Block...">
+<datalist id="blocks">
+  <option value="Zamania">
+  <option value="Saidpur">
+  <option value="Mohammadabad">
+  <option value="Jakhania">
+  <option value="Ghazipur Sadar">
+</datalist>
+
+Rate Public Services (1-10):
+Low <input type="range" name="rating" min="1" max="10"> High
+
+Preferred Theme Color for Portal:
+<input type="color" name="favcolor" value="#8b0000">
+
+Describe Your Suggestion:
+<textarea name="msg" rows="5" cols="60" placeholder="Tell us how we can make Ghazipur a Smart City..."></textarea>
+                    </pre>
+                    <center>
+                        <button type="submit"><b>SEND FEEDBACK</b></button>
+                        <button type="reset"><b>RESET</b></button>
+                    </center>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+
+    <br>
+    <footer>
+        <hr size="1" color="gray">
+        <center>
+            <p>&copy; 2026 Smart Ghazipur Initiative | Designed by <b>Abhishek Singh</b></p>
+            <address>Vikash Bhawan, Collectorate, Ghazipur (UP)</address>
+        </center>
+    </footer>
+
+</body>
+</html>

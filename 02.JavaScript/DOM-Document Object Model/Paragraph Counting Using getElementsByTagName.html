@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Counting the Number of Paragraphs</title>
+</head>
+<body>
+	<h1>Counting the Number of Paragraphs by Using getElementsByTagName</h1>
+	<script>
+		function paracount() {
+			var totalpara = document.getElementsByTagName ("p");
+			alert("tatal P tag are : " + totalpara.length);
+		}
+	</script>
+	<p> This is a ParaGraph</p>
+	<p> Here we are going to count the number paragraphs</p>
+	<p> Let See the Welcome Massage</p>
+	<p> It's a simple Example</p>
+	<button onclick="paracount()"> Count Paragraph </button>
+</body>
+</html>

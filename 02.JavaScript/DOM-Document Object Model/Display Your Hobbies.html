@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title> Display Your Hobbies </title>
+</head>
+<body>
+  <p>Select Your Hobbies</p>
+  <input type = "checkbox" name = "hobby" value = "Reading"> Reading
+  <input type = "checkbox" name = "hobby" value = "Travelling"> Travelling
+  <input type = "checkbox" name = "hobby" value = "Music"> Music
+  <br><br>
+  <button onclick = "getchekedHobbies()"> show Selected Hobbies </button>
+  <p id = "hobbyResult"></p>
+  <script>
+  function getchekedHobbies() {
+    let checkBox = document.getElementsByName("hobby");
+    let selectedHobbies = [];
+      for(let i=0;i<checkBox.length;i++) {
+        if(checkBox[i].checked) {
+          selectedHobbies.push(checkBox[i].value);
+        }
+      }
+       document.getElementById("hobbyResult").innerHTML = "Selected Hobbies : " + selectedHobbies.join(", ");
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head><title>Factorial</title></head>
+<body>
+  <hr>
+  <h2> Factorial of the Number</h2>
+  <hr>
+  <script>
+  // ===================== Variable Declaration ============================
+    let num,fact;
+  //====================== Reading & Printing of the User Inputs =====================
+    num = parseInt(prompt("Enter the Number to Processed : "));
+    fact = 1;
+    document.write("Your Entered Number is : " + num + "<hr>");
+    document.write("Factorial Process of (!" + num + ") = ");
+  // ===================== Processing to performance ===========================
+    for (i = 1;i <= num; i++) {
+      fact = (fact * i);
+      document.write(i);
+      (i<num) ? document.write("x") : document.write("=")
+    } document.write(fact + "<hr>");
+  // ======================== Display Output of the Processed Result ===============
+  </script>
+</body>
+</html>

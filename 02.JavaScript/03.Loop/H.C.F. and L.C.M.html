@@ -1,0 +1,29 @@
+<html>
+<head><title> H.C.F and  L.C.M. Calculation </title></head>
+<body>
+  <h1> H.C.F  and L.C.M. Calulation : </h1>
+  <script>
+  //++++++++++++++++++++ Input from User ++++++++++++++++++++++
+let num1 = parseInt(prompt("Enter the First Number : "));
+let num2 =  parseInt(prompt("Enter the Second Number :"));
+// +++++++++++++  Variable Initialization +++++++++++++++++++++++++
+  let limit, lcm, hcf;
+  // ++++++++++++++++++++ Condition & Process ++++++++++++++++++++++++++++
+  if(num1>num2) {
+    limit = num1;
+  } else { limit = num2; }
+  for( let i=1; i<limit; i++) {
+    if( num1%i == 0 && num2%i == 0) {
+      hcf = i }
+  }
+    lcm = (num1* num2) / hcf;
+// +++++++++++++++++++ Display Result +++++++++++++++++++
+    document.write(" Your Entered First Number is : " + num1 + "<br>");
+    document.write("Your Entered Second Number is : " + num2 + "<br>");
+    document.write("...............................................................................................<br>");
+    document.write (" <h3>Your Result is : <br></h3>")
+    document.write("H.C.F. : " +hcf+ "<br>" );
+    document.write("L.C.M. :  " +lcm);
+  </script>
+</body>
+</html>

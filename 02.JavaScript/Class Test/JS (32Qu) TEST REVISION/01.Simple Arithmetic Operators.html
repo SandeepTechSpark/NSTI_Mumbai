@@ -1,0 +1,25 @@
+<html>
+<head><title>ArithmeticOperators</title></head>
+<body>
+  <hr><h1>Simple Arithmetic Operators</h1>
+  <hr><h4>(+, -, *, /, %, **, etc.</h4>
+  <hr>
+  <script>
+  // ================= Variable Declaration & Initializaion ========================
+    let a,b;
+  // ============= Input Reading from User & Printing Inputs =====================
+    a = parseInt(prompt("Enter the First Operand (A) : "));
+    b = parseInt(prompt("Enter the Second Operand (B) : "));
+    document.write("<hr>A = " + a + "<br>B = " + b + "<hr>" );
+  // ======================= Display Output of Simple Operators ===================
+    document.write("Addition (A+B) : " + (a+b) + "<br>");
+    document.write("Substraction (A-B) : " + (a-b) + "<br>");
+    document.write("Multiplication (A*B) : " + (a*b) + "<br>");
+    document.write("Division (A/B) : " + (a/b).toFixed(2) + "<br>");
+    document.write("Modulus (A%B) : " + (a%b) + "<br>");
+    document.write("Exponentiation (A**B) : " + (a**b) + "<br>");
+    document.write("Increament (++A) : " + (++a) + "<br>");
+    document.write("Decreament (--A) : " + (--a) + "<hr>");
+  </script>
+</body>
+</html>

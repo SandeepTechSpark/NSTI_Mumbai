@@ -1,0 +1,56 @@
+<html>
+<head> </head>
+<body>
+<h1> Diagonal of a Matrix  </h1>
+<hr>
+<script>
+// ++++++++++ Read Matrix ++++++++++
+function readMatrix(a,m,n) {
+      for(i=0;i<m;i++) {
+            for(j=0;j<n;j++) {
+                a[i][j] = parseInt(prompt("Enter the Elements of Matrix : "));
+         }
+     }
+}
+// +++++++++ Display Matrix ++++++++
+ function displayMatrix(a,m,n) {
+  for (i=0;i<m; i++) {
+        for (j=0;j<n; j++) {
+                    document.write(a[i][j] + " ");
+        } document.write("<br>");
+     }
+ }
+ // +++++++++++++ Diagonal of Matrix ++++++++++++++
+  function diagonal (a,m,n) { //Diagoanal
+      for (i=0;i<m; i++) {   
+            for (j=0;j<n; j++) {
+                    if (i==j) document.write(a[i][j] + " ");
+                    else document.write(" &nbsp ");
+        } document.write("<br>");
+    }
+}   
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  // ++++ variable Initialization and Declaration ++++++ 
+  let a,m,n;
+  m = parseInt(prompt("Enter the Row Limit of Matrix : "));
+  n = parseInt(prompt(" Enter the Column Limit of Matrix : "));
+ // +++++ Object Creation & Space Allocation++++++
+  a = new Array(m);
+  for (i=0;i<m;i++)  {
+   a[i]= new Array(n);
+  }
+  //++++++ Function Calling ++++++
+if(m==n) {
+  readMatrix(a,m,n); // Read Matrix 
+  document.write("Matrix is : <br>");
+  displayMatrix(a,m,n); // Display Matrix 
+    document.write("Diagonal of Matrix is : <br> ");
+    diagonal (a,m,n) // Diagonal of Matrix
+    } else {
+    document.write("Error !! There should be squire Matrix to find a diagonal ! ");
+   } document.write("<hr>");
+</script>
+</body>
+</html>

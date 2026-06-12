@@ -1,0 +1,27 @@
+<html>
+<head> 
+ <h1> Reverse of a Number :</h1> <br><br>
+      </head>
+  <body>
+  <script>
+   /* ++++++++++++++++++ Calculate Using do... while loop +++++++++++++++++++++ 
+    var n = parseInt(prompt("Enter the Number : "));
+     document.write(" Your have Entered the Numers is : " + n + "<br>");
+    var digit, dup,  rev = 0;
+    dup = n;
+    do {  digit = n % 10;
+             rev = rev * 10 + digit;
+             n = parseInt (n/10); 
+   } while (n>0);
+    document.write("Reverse digits of the Entered Number is : " + rev);
+    +++++++++++++++++ Calculate Using while loop +++++++++++++++++++++++++*/
+    let num = parseInt(prompt("Enter Your Number : "));
+    let dup = num, temp, rev = 0;
+    while (num>0) {
+            temp = num % 10;
+            rev = rev *10 + temp;
+            num = parseInt(num/10); }
+    document.write("You have entered the Number is : " + dup + "<br>" + "and Reverse Digits of Entered Number is : " +rev); 
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghazipur Smart City Dashboard</title>
+</head>
+<body bgcolor="whitesmoke" text="black" topmargin="40" leftmargin="40" rightmargin="40">
+    <header>
+        <center>
+            <h1><font face="Verdana" text="darkred">GHAZIPUR DIGITAL INFORMATION HUB</font></h1>
+            <p><i>Real-Time District Data & Heritage Portal</i></p>
+            <nav>
+                <hr color="darkred">
+                <a href="#statistics">Statistics</a> |
+                <a href="#heritage">Heritage site</a> |
+                <a href="#feedback">Submmit Feedback</a> |
+                <a href="https://wwww.ghazipur.nic.in" target="_self">Official Portal</a>
+                <hr color="darkred">
+            </nav>
+        </center>
+    </header>
+    <main>
+        <section id="Statistics">
+        <h2 align="center" color="black">District Statistical Profile (2026)</h2>
+        <table border="1" bgcolor="white" width="100%" cellpadding="15" cellspacing="0">
+            <thead bgcolor="darkred">
+                <tr align="center">
+                    <th><font style="color : white;">Category</font></th>
+                    <th><font style="color : white;">Indicator</font></th>
+                    <th><font style="color : white;">Data Value</font></th>
+                    <th><font style="color : white;">Remarks</font></th>
+                </tr>
+            </thead>
+            <tbody bgcolor="white">
+                <center>
+                <tr>
+                    <td rowspan="4" align="center"><b>Demographics</b></td>
+                    <td>Total Population</td>
+                    <td>36.2 Lacks</td>
+                    <td>Approx. 2021 Census</td>
+                </tr>
+                <tr>
+                    <td>Literacy Rate</td>
+                    <td>71.78%</td>
+                    <td>Increasing Yearly</td>
+                </tr>
+                <tr>
+                    <td>Total Area</td>
+                    <td>3,377 sq Km</td>
+                    <td>Eastern UP Region</td>
+                </tr>
+            </center>
+        </tbody>
+        <tfoot>
+            <tr bgcolor="lightgrey">
+                <td colspan="4" align="center"><b>Data Source : </b><i>National Information Center (NIC), Ghazipur</i></td>
+            </tr>
+        </tfoot>
+        </table>
+    </section>
+    <br><br>
+    <section id="heritage">
+        <h2 align="left">Explore Ghazipur Heritage</h2>
+        <ul>
+            <details>
+            <summary><b>The Tomb Of Lord Cornwallis (Click to Expand)</b></summary>
+            <p>Located in the heart of the city, this monument is a protected site under the Archaeological Survey of India (ASI). 
+                sLord Cornwallis died here in 1805 while serving as Governor-General.</p>
+        </details> <br>
+        <details>
+            <summary><b>The Opium Factory</b></summary>
+            <p>Established in 1820, it is one of the oldest and largest legal 
+                opium factories in the world, exporting medicinal products globally.</p>
+        </details>
+    </ul>
+    </section> 
+    <br>
+    <section id="feedback">
+        <hr color="darkred">
+        <h2 align="center"><font text='black'>Give Your Feedback</font></h2>
+        <hr color="darkred">
+            <fieldset border="3">
+                <legend><h3>Help Us Improve Our District</h3></legend>
+            <form method="post" action="">
+                <pre>
+<label for="name">Name                  :   </label> <input type="text" id="name" name="name" maxlength="70" placeholder="Enter Your Name" required><br>
+<label for="block">Select Block         :   </label> <select id='block'>
+  <option selected disabled value="">Select Your Block</option>
+  <option value="Zamania">Zamania</option>
+  <option value="Saidpur">Saidpur</option>
+  <option value="Mohammadabad">Mohammadabad</option>
+  <option value="Jakhania">Jakhania</option>
+  <option value="Ghazipur Sadar">Ghazipur Sadar</option>
+  <option value="Kasimabad">Kasimabad</option>
+  </select>
+Rate Public Service (0-10)              : Low <input type='range' name='taring' min='0' max='10' required> High <br>
+Prefered Theme Color For Portal         : <input type='color' name='color'><br>
+Describe Your Suggetion                 : <textarea rows='5' cols='45' placeholder='Tell Us How We can Make Ghazipur a Smart City ......'></textarea>
+                                <center> <button type='submit'><b>Send Feedback</b></button> <button type='reset'><b>Clear</b></button>
+                    </center>        
+                </pre>
+            </form>
+            </fieldset>
+    </section>
+    </main>
+    <br>
+    <footer>
+        <center>
+            <hr size='1' color='black'>
+            &copy; 2026 Smart Ghazipur Initiative | Designed by : <b>Abhishek Singh</b><br><br>
+            <mark><em>Vikash Bhawan, Collectorate, Ghazipur(UP)</em></mark>
+        </center>
+    </footer>
+</body>
+</html>

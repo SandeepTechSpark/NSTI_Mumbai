@@ -1,0 +1,30 @@
+<html>
+<head><title>Sum,Minimum,Maximum and Agerage in Array</title></head>
+<body>
+  <hr><h2>Sum,Minimum,Maximum and Agerage in Array</h2><hr>
+  <script>
+ // ================= Variable Declaration ==============================
+    let n, arr;
+    n = parseInt(prompt("Enter the Arrya Limit : "));
+    arr = [];
+    for(let i=0;i<n;i++) arr[i] = parseInt(prompt("Enter the Array Elements  : "));
+     // ---------- Display the Original Array 
+       document.write("The Original Array is = [ ");
+      for(let i=0;i<n;i++) document.write(arr[i]+ " ");
+        document.write(" ] <hr>");
+  // =================== Process to Find Sum,Min, Max and Average ===================
+        let sum = 0, max = arr[0], min = arr[0], avg;
+          for (let i=0;i<n;i++) {
+            sum += arr[i];
+            if (arr[i] > max) max = arr[i];
+            if (arr[i] < min) min = arr[i];
+          }
+          avg = sum/arr.length;
+  // ========================== Display Output ========================
+      document.write("<hr><b>Sum : </b>" + sum);
+      document.write("<br><b>Max : </b>" + max);
+      document.write("<br><b>Min : </b>" + min);
+      document.write("<br><b>Average : </b>" + avg.toFixed(2)+ "<hr>");
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head><title>Number Sorting</title></head>
+<body>
+  <hr><h2>Number Sorting in Ascending & Descending Order using Bubble Sort</h2><hr>
+  <script>
+  // ============== Variable Declareation ================
+    let arr, n;
+  // =================== User Input Reading & Memory Allocation ======================
+    n = parseInt(prompt("Enter your Array Limit (N) : "));
+    arr = new Array(n);
+   for(i=0;i<n;i++) arr[i] = parseInt(prompt("Enter the Array Eliments : "));
+  // ==================== Display Original Array ============================
+     document.write("Original Array is : [ ");
+     for(i=0;i<n;i++) {
+       document.write( arr[i] + " ");
+     } document.write(" ] <hr>");
+       
+       
+//  +++++++++++++++++++++++++++++++++ Process for Sorting ++++++++++++++++++++++++++++++
+       
+       
+     // ------------------- in Ascending Order ---------------------
+       for(i=0;i<n-1;i++) {
+         for(j=0;j<n-i-1;j++) {
+           if(arr[j] > arr[j+1]) {
+             let temp = arr[j];
+             arr[j] = arr[j+1];
+             arr[j+1] = temp;
+           }
+         }
+       }
+// ======== Display Sorted Array ============
+            document.write("Array is in Asending Order : [ ");
+         for(i=0;i<n;i++) document.write(arr[i] + " ");
+            document.write(" ] <hr>");
+       // ------------------------- in Descending Order -------------------
+           for(i=0;i<n-1;i++) {
+         for(j=0;j<n-i-1;j++) {
+           if(arr[j] < arr[j+1]) {
+             let temp = arr[j];
+             arr[j] = arr[j+1];
+             arr[j+1] = temp;
+           }
+         }
+       }
+// ======== Display Sorted Array ============
+            document.write("Array is in Descending Order : [ ");
+         for(i=0;i<n;i++) document.write(arr[i] + " ");
+            document.write(" ] <hr>");
+  </script>
+</body>
+</html>

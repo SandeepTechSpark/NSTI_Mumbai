@@ -1,0 +1,40 @@
+<html>
+<head> </head>
+<body>
+<h1> Roots of a Quadretic Equation :</h1>
+<hr>
+<script type="text/javascript" charset="utf-8">
+// ++++++++ Initialization and Variable Declaration ++++++++++
+ var a,b,c;
+ a = parseInt(prompt("Enter the Value of A :"));
+ b = parseInt(prompt("Enter the Value of B : "));
+ c = parseInt(prompt("Enter the Value of C : "));
+ 
+  var discriminant,root1,root2;
+  // +++++++++++++++ Discriminant Calculation +++++++++++
+      discriminant = Math.pow(b,2)-(4*a*c);
+  // +++++++++++ Root Calculation According to Conditions ++++++++++
+    if(discriminant>0 && a != 0) {
+      root1 = (-b + Math.sqrt(discriminant))/(2*a);
+      root2 = (-b - Math.sqrt(discriminant))/(2*a);
+  //  ++++++ Roots are Real and Different +++++++++
+      document.write("Roots are real and Different : <hr>");
+      document.write("First Root is : " + root1.toFixed(2) + "<br> Second Root is : " + root2.toFixed(2)+ "<hr><br>");
+    } else if (discriminant==0 && a != 0) {
+      root1 = (-b)/(2*a);
+  // ++++++++++ Roots are real and Same  +++++++++++
+      document.write("Roots are real and Same : <hr>");
+      document.write(" <br> Root is : " + root1 + "<hr>");
+    } else if ( discriminant < 0 && a != 0) {
+  //  +++++++ Roots are Complex ++++++++++
+    var realpart = (-b)/(2*a);
+    var imaginarypart = (Math.sqrt(-discriminant)/(2*a));
+    document.write("Roots are Complex : <hr>");
+    document.write("First Root is : " + (realpart + imaginarypart).toFixed(2) +"i");
+    document.write("<br> Second Root is : " +(realpart - imaginarypart).toFixed(2) +"i<hr>");
+    }  else {
+     document.write("<b>Mistake!</b> <mark><u>Value of A should not be equal to Zero.</u></mark> <hr><hr>");
+    }
+</script>
+</body>
+</html>

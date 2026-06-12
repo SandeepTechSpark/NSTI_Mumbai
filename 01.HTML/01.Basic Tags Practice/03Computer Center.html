@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specific Computer Center | बड़ौदा ग्राम</title>
+    <style>
+        /* CSS: डिजाइन और लुक */
+        body { font-family: 'Arial', sans-serif; margin: 0; background-color: #f0f2f5; }
+        
+        /* नेविगेशन बार */
+        nav { background: #2c3e50; padding: 15px; display: flex; justify-content: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; text-decoration: none; padding: 10px 20px; font-weight: bold; cursor: pointer; border-radius: 4px; transition: 0.3s; }
+        nav a:hover, nav a.active { background: #e67e22; }
+
+        /* कंटेंट एरिया */
+        .container { max-width: 1000px; margin: 30px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); min-height: 400px; }
+        
+        /* पेज ट्रांजिशन (छिपाना/दिखाना) */
+        .page { display: none; animation: fadeIn 0.5s; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* कोर्सेज कार्ड्स */
+        .course-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; border-left: 5px solid #2c3e50; }
+
+        /* फॉर्म डिजाइन */
+        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background: #27ae60; color: white; border: none; padding: 15px; width: 100%; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #219150; }
+
+        footer { text-align: center; padding: 20px; background: #2c3e50; color: white; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<nav id="mainNav">
+    <a onclick="showPage('home')" class="nav-link active" id="link-home">होम</a>
+    <a onclick="showPage('courses')" class="nav-link" id="link-courses">कोर्सेज</a>
+    <a onclick="showPage('admission')" class="nav-link" id="link-admission">एडमिशन</a>
+    <a onclick="showPage('about')" class="nav-link" id="link-about">हमारे बारे में</a>
+</nav>
+
+<div class="container">
+    
+    <div id="home" class="page active">
+        <h1>Specific Computer Center में आपका स्वागत है</h1>
+        <p style="font-size: 1.2em; color: #555;">कासिमाबाद तहसील के बड़ौदा ग्राम क्षेत्र का अग्रणी डिजिटल शिक्षा केंद्र।</p>
+        <div style="background: #e67e22; color: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
+            <h3>ताज़ा अपडेट:</h3>
+            <p>नया "Web Development with PHP" बैच 1 अप्रैल 2026 से शुरू हो रहा है। आज ही पंजीकरण करें!</p>
+        </div>
+    </div>
+
+    <div id="courses" class="page">
+        <h1>हमारे प्रमुख कोर्सेज</h1>
+        <div class="course-list">
+            <div class="card">
+                <h3>Excel Expert 📊</h3>
+                <p>Data Analysis, Pivot Tables और MIS रिपोर्टिंग सीखें।</p>
+            </div>
+            <div class="card">
+                <h3>Web Design 💻</h3>
+                <p>HTML5, CSS3 और JavaScript में प्रो बनें।</p>
+            </div>
+            <div class="card">
+                <h3>DTP Pro 🎨</h3>
+                <p>CorelDraw और Photoshop के साथ फ्लेक्स डिजाइनिंग।</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="admission" class="page">
+        <h1>ऑनलाइन एडमिशन फॉर्म</h1>
+        <form id="regForm">
+            <input type="text" placeholder="पूरा नाम" required>
+            <input type="tel" placeholder="मोबाइल नंबर" required>
+            <select>
+                <option value="">कोर्स चुनें</option>
+                <option value="excel">Excel Expert</option>
+                <option value="web">Web Development</option>
+                <option value="dtp">DTP & Designing</option>
+            </select>
+            <textarea placeholder="आपका संदेश या सवाल" rows="4"></textarea>
+            <button type="submit">सबमिट करें</button>
+        </form>
+        <p id="msg" style="color: green; text-align: center; margin-top: 10px;"></p>
+    </div>
+
+    <div id="about" class="page">
+        <h1>हमारे बारे में</h1>
+        <p>Specific Computer Center का लक्ष्य ग्रामीण युवाओं को आधुनिक तकनीक से जोड़ना है। हम केवल पढ़ाते नहीं, बल्कि आपको आत्मनिर्भर बनाते हैं।</p>
+        <p><strong>पता:</strong> बड़ौदा ग्राम, निकट कासिमाबाद, गाजीपुर (U.P.)</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Specific Computer Center | Designed with ❤️ in Ghazipur</p>
+</footer>
+
+<script>
+    // JavaScript: पेजों के बीच स्विच करने के लिए लॉजिक
+    function showPage(pageId) {
+        // सभी पेजों को छिपाएं
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active'));
+
+        // चुने हुए पेज को दिखाएं
+        document.getElementById(pageId).classList.add('active');
+
+        // नेविगेशन लिंक्स का कलर अपडेट करें
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => link.classList.remove('active'));
+        document.getElementById('link-' + pageId).classList.add('active');
+    }
+
+    // फॉर्म सबमिशन का डेमो
+    document.getElementById('regForm').onsubmit = function(e) {
+        e.preventDefault();
+        document.getElementById('msg').innerText = "बधाई हो! आपका आवेदन दर्ज कर लिया गया है।";
+        this.reset();
+    };
+</script>
+
+</body>
+</html>

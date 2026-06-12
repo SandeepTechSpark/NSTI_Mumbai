@@ -1,0 +1,50 @@
+<html>
+<head> </head>
+<body>
+<h1>Result Sheet of a Trainee </h1>
+<hr>
+<script>
+// ++++++++ Initialization and Variable Declaration ++++++++++
+ var net,js,php,python,mysql,totalmarks,percentage,result;
+ 
+ net = parseInt(prompt("Enter the Marks of Networking : "));
+ js = parseInt(prompt("Enter the Marks of Java Script : "));
+ php = parseInt(prompt("Enter the Marks of PHP : "));
+ python = parseInt(prompt("Enter the Marks of Python : "));
+ mysql = parseInt(prompt("Enter the Marks of MySQL : "));
+// +++++++ Total Marks, Percentage and Result ++++++++
+ totalmarks = parseInt(net+js+php+python+mysql);
+ percentage = parseFloat((totalmarks/5).toFixed(2));
+ if ( net<30 || js<30 || php<30 || python<30 || mysql<30) {
+  result = "Fail!";
+ } else { result = "Pass!";
+  
+ }
+// ++++++++ Grade Calculation ++++++++++++
+ let grade = " ";
+ if(percentage>90) { 
+  grade = "A+";
+ }else if (percentage>80){
+  grade = "A";
+ }else if (percentage>70){
+  grade = "B+";
+ }else if (percentage>60){
+  grade = "B";
+ }else if (percentage>50){
+  grade = "C+";
+ }else if (percentage>40){
+  grade = "C";
+ }else if (percentage>30){
+  grade = "D";
+ }else if (percentage<30){
+  grade = "E";
+ }
+ 
+ // ++++++++ Display out put in Table ++++++++
+  document.write("Networking : " + net + "<hr>Java Script : " + js + "<hr> PHP : " + php + "<hr> Python : " + python);
+  document.write("<hr> MySQL : " + mysql + "<hr><hr><hr><hr> Total Marks : " + totalmarks);
+  document.write("<hr> Percenage : " + percentage + "% <hr> Result : " + result + "<hr> Grade : " + grade + "<hr><hr><hr>");
+ 
+</script>
+</body>
+</html>

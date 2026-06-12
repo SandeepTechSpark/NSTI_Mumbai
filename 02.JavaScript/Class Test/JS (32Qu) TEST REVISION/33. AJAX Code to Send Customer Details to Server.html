@@ -1,0 +1,38 @@
+<html>
+<body>
+  <script>
+  function sendFormData() {
+    var abc = new XMLHttpRequest ();
+    
+    const mFormEle = document.querySelector("#mForm");
+    const myForm = new FormData(mFormEle);
+    
+    abc.onreadystatechange = function() {
+      if(this.readyState == 4 && this.status == 201) {
+        document.getElementById("Example").innerHTML = this.responseText;
+        
+        console.log("Form data Posted Successfully");
+      }
+    }
+    abc.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
+    abc.send(myForm);
+  }
+  </script>
+  
+  <center>
+    <pre>
+    <form id = "mForm">
+      <h2> Enter the Request Data </h2>
+      Customer Code   : <input type='number' name='ccode' id='custCode' placeholder='Customer Code'><br><br>
+      Customer Name   : <input type='text' name='cname' id='custName' placeholder='Customer Name'><br><br>
+      Place           : <input type='text' name='cplace' id='custPlace' placeholder='Place'><br><br>
+      City            : <input type='text' name='ccity' id='custCity' placeholder='City'><br><br>
+      Phone No        : <input type='number' name='cphone' id='custPhone' placeholder='Phone No/Mobile'><br><br>
+      
+      <button type='button' onclick='sendFormData()'>Submit Request</button>  <input type='reset' value='Clear'>        
+    </form>
+    </pre>
+    <div id='Example'></div>
+  </center>
+</body>
+</html>

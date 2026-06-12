@@ -1,0 +1,19 @@
+<html>
+<head> 
+ <h1>Sum of Even Numbers below - n :</h1> <br><br>
+      </head>
+  <body>
+  <script>
+   var i;
+    var n = parseInt(prompt("Enter the Number : "));
+    var sum = 0;
+      document.write(" All even number below " + n + " is : ");
+    for (i= 2; i<n; i++) {
+      if (i%2==0) {
+        document.write(i + " ");
+        sum += i; 
+      } }
+      document.write("<br> Sum of Even Numbers below - " + n + " is : " + sum);
+    </script>
+</body>
+</html>

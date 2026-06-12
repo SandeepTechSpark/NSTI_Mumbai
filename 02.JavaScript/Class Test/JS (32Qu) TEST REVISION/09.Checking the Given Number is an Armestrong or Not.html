@@ -1,0 +1,25 @@
+<htm>
+  <head><title>Armestrong Number</title></head>
+  <body>
+    <hr>
+    <h2> Checking the Given Number is an Armestrong Number or Not </h2>
+    <hr>
+    <script>
+   // ============ ===== Variable Declaration & Initialization =================
+      var num, orgNum, digit, temp, sum = 0;
+   // ==================== Input Reading from User =============================
+      num = parseInt(prompt("Enter a Number : " ));
+      orgNum = num;
+      document.write("Your Given Number is = " + num + "<hr> <b> Result : </b>");
+      digit = num.toString().length;
+   // ======================= Process to Check ==============================
+      while(num>0) {
+        temp = (num%10);
+        sum += Math.pow(temp,digit);
+        num = Math.floor(num/10);
+      }
+   // =============================== Display Outpur ===========================
+     document.write((sum==orgNum) ?  "It's an Armestrong Number<hr>" : "It's Not a Armestrong Number<hr>");
+  </script>
+  </body>
+</html>

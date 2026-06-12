@@ -1,0 +1,94 @@
+<html><head><title>StudentRegistrationForm</title></head>
+<body>
+    <hr><h1 align='center'>Student Registration Form<hr></h1>
+    <form method='post' id='app'>
+ <pre><table  border='06' cellspacing='16' align='left'>
+  <tr><th colspan='2' align='center'><h3>Candidate Details</h3></th></tr>
+<tr><th>Candidate Name </th><td><input type='text' name='name' id='n1' placeholder='Enter Student Namwe'></td></tr>
+ <tr><th>Date of Birth & Age </th><td><input type='date' name='dob' id='n2' onblur='getAge()'> 
+ <input type='text' name='age' size='5' id='n3' readonly></td></tr>
+              <tr><td><b>Gender</b></td><td>
+              <input type='radio' name='gender' id='n4' value='Male'>Male 
+              <input type='radio' name='gender' id='n5' value='Female'>Female
+              </td></tr>
+  <tr><td><b>Religion & Caste </b></td><td>
+ <select name='religion' id='n6'><option selected disabled >Select Religion</option>
+  <option>Hindu</option><option>Muslim</option><option>Sikh</option>
+ <option>Christion</option><option>Buddhist</option>
+     <option>Other</option> </select>
+              
+    <select name='caste' id='n7'><option selected disabled >Select Caste</optoin>
+    <option>General</option><option>EWS</option><option>OBC</option><option>SC</option>
+    <option>ST</option></select>
+    </td></tr>
+ <tr><th>Father/Guardian Name</th><td><input type='text' name='fname' id='n8' size='40'></td></tr>
+ <tr><th><b>Address</b></th><td><textarea row='4' cols='49' id='n9' name='address'></textarea></td></tr>
+<tr><th><b>Contact Details</b></th><td>
+Mobile No : <input type='number' placeholder='Enter Your Mobile Number' name='mobile' id='n10' size='40'><hr>
+Email Id : <input type='email' name='email' placeholder='Enter Your Email Address' size='40' id='n11'>
+</td></tr>
+<tr><th><b>Qualification</b></th>
+<td align='left'>
+ Matriculation<input type='checkbox' id='qual1' value='Matriculation'>
+ Intermediate<input type='checkbox' id='qual2' value='Intermediate'>
+ Graduation<input type='checkbox' id='qual3' value='Graduation'>
+ Post Graduation<input type='checkbox' id='qual4' value='Post Graduation'>
+ Diploma<input type='checkbox' id='qual5' value='Diploma'>
+ Other<input type='checkbox' id='qual6' value='Other'>
+</td></tr>
+<tr><td align='center' colspan='2'>
+ <input type='button' onclick='validate()' value='Submit'>
+ <input type='reset' name='clear' value='Clear'>
+</td></tr>
+</table></pre>
+</form>
+<script>
+// ============= Function Creation to Get Age =====================
+    function getAge() {
+var dob = document.getElementById('n2');
+var age = document.getElementById('n3');
+    if(dob.value) {
+  var dt1 = new Date();
+  var dt2 = new Date(dob.value);
+  var d1 = dt1.getFullYear();
+  var d2 = dt2.getFullYear();
+        
+  var monthDiff = dt1.getMonth()-dt2.getMonth();
+  age.value = monthDiff<0 || (monthDiff === 0 && dt1.getDate()<dt2.getDate()) ? d1-d2-1 : d1-d2;
+    } else age.value = '';
+ }
+        
+// ===================== Function for Validation ======================
+    function validate() {
+  var name = document.getElementById('n1');
+  var dob = document.getElementById('n2');
+  var fname = document.getElementById('n8');
+  var address = document.getElementById('n9');
+  var mobile = document.getElementById('n10');
+  var email = document.getElementById('n11');
+  var qual1 = document.getElementById('qual1');
+  var qual2 = document.getElementById('qual2');
+  var qual3 = document.getElementById('qual3');
+  var qual4 = document.getElementById('qual4');
+  var qual5 = document.getElementById('qual5');
+  var qual6 = document.getElementById('qual6');
+        
+  if(name.value.trim() === "") { alert ("Please Enter Your Name here"); name.focus(); return; }
+  if(dob.value.trim() === "") { alert ("Please Select Your Date Of Birth"); dob.focus(); return;}
+  if(fname.value.trim() === "") { alert ("Please Enter Your Father/Guardian Name"); fname.focus(); return;}
+  if(address.value.trim() === "") { alert ("Please Enter Your Full Address"); address.focus(); return;}
+  if(mobile.value.trim() == "") { alert ("Please Entere Your Correct Mobile Number"); mobile.focus(); return;} 
+  if(email.value.trim() === "") { alert ("Please Enter Your Correct Contact Details"); email.focus(); return;}
+    var l1=mobile.value.length;
+  if(l1!==10||isNaN(mobile.value)) { alert("Mobile Number can not be less than 10 digits"); mobile.focus();return;}
+  if(!qual1.checked && !qual2.checked &&
+     !qual3.checked && !qual4.checked &&
+     !qual5.checked && !qual6.checked) { alert("Please Select  at least one as Your Qualification");return;}
+      
+     alert("Registration Completed Successfully");
+       document.getElementById('app').submit();
+    }   
+  </script>
+    
+</body>
+</html>

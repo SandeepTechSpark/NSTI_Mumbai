@@ -1,0 +1,29 @@
+<html>
+<head> </head>
+<body>
+    <h1> BMI Calculator : </h1>
+    <script>
+// ++++++++++++ variable Declaration and Initialization ++++++++++
+    let w, h, bmi, name;
+   name = prompt("Enter Your Name : ");
+    w = parseInt(prompt("Enter your weight in (kg) : "));
+    h = parseInt(prompt("Enter your height in (cm) : "));
+// ++++++++++ Display Input and BMI ++++++++++
+    document.write("<hr> Name : " + name +"<br>");
+    document.write("Weight = " +w+ "kg.<br> Height = " +h+"cm.<hr>");
+    bmi = ((w)/((h/100)*(h/100))).toFixed(2);
+    document.write("Your BMI is : " +bmi+ "<hr>")
+// +++++++++++++++++++++Process of Checking Fittness Status +++++++++++++++++++
+    if(bmi<18.5) {
+        document.write("You are Under weight !!")
+    } else if(bmi>= 18.5 && bmi <25) {
+        document.write("Your are Normal.");
+    } else if (bmi>= 25 && bmi < 30) {
+        document.write("You are Over Weight !!");
+    } else {
+        document.write("You are Obesity.")
+    }
+    document.write("<hr>");
+    </script>
+</body>
+</html>
