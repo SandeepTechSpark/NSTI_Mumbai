@@ -11,7 +11,6 @@ public class AdditionTwoNumbers {
         // Process to Add both numbers
         int add = (num1+num2);
         
-        
         // Display Output 
         System.out.print("\nDisplay output");
         System.out.print("\nAddition : " + add);
