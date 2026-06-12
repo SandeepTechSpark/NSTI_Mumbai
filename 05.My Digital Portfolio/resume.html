@@ -1,40 +1,310 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
   <title>My Resume</title>
   <style>
-  body{
-    
-  }
+    /* --- CSS Reset & Base Styles --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f7f9;
+      padding: 20px;
+    }
+
+    /* --- Header Styles --- */
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 20px;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .resume-p1 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .resume-p2 {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: #ddd;
+      margin: 15px 0;
+    }
+
+    header hr {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* --- Navigation Bar --- */
+    .Menu-bar nav {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .Menu-bar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .Menu-bar nav a:hover {
+      background: #fff;
+      color: #1e3c72;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    /* --- Main Content Layout --- */
+    main {
+      background: white;
+      padding: 30px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      display: grid;
+      grid-template-columns: 30% 70%;
+      gap: 30px;
+    }
+
+    .main-heading {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .main-heading h1 {
+      color: #1e3c72;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* --- Left Section (Sidebar) --- */
+    .left-section {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #1e3c72;
+    }
+
+    .left-section img {
+      display: block;
+      width: 130px !important;
+      /* रिस्पॉन्सिव और बेहतर साइज */
+      height: 130px !important;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 15px auto;
+      border: 3px solid #2a5298;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .left-section img:hover {
+      transform: scale(1.05);
+    }
+
+    .left-section-main-heading {
+      text-align: center;
+      font-size: 1.3rem;
+      color: #1e3c72;
+      margin-bottom: 15px;
+    }
+
+    .contact-details {
+      font-size: 0.9rem;
+      word-wrap: break-word;
+    }
+
+    .contact-details b {
+      color: #2a5298;
+    }
+
+    .career-objective {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #555;
+      text-align: justify;
+    }
+
+    /* --- Right Section (Tables) --- */
+    .right-right {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    /* मॉडर्न टेबल डिज़ाइन */
+    table[border="4"] {
+      width: 100%;
+      border-collapse: collapse !important;
+      border: none !important;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    table tr th {
+      background-color: #2a5298;
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      padding: 12px 10px !important;
+      border: 1px solid #e2e8f0 !important;
+    }
+
+    table tr th[colspan] {
+      background-color: #1e3c72;
+      font-size: 1rem;
+    }
+
+    table tr td {
+      padding: 10px !important;
+      border: 1px solid #e2e8f0 !important;
+      font-size: 0.9rem;
+      color: #4a5568;
+    }
+
+    table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    table tr:hover td {
+      background-color: #edf2f7;
+      color: #000;
+      transition: background-color 0.2s ease;
+    }
+
+    /* List items inside table */
+    table ul {
+      padding-left: 20px;
+    }
+
+    table ul li {
+      margin-bottom: 5px;
+    }
+
+    /* --- Bottom Section (Declaration) --- */
+    .botton-section {
+      grid-column: 1 / -1;
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .botton-section div:nth-child(2) {
+      margin-top: 20px;
+      display: flex;
+      align-items: flex-end;
+      gap: 5px;
+      justify-content: space-between;
+    }
+
+    .botton-section h3 {
+      color: #1e3c72;
+      margin-top: 10px;
+    }
+
+    /* --- Footer Styles --- */
+    footer {
+      background: #1a202c;
+      color: #a0aec0;
+      padding: 20px;
+      border-radius: 0 0 8px 8px;
+      font-size: 0.85rem;
+      margin-top: 20px;
+    }
+
+    footer center p {
+      margin-bottom: 8px;
+    }
+
+    footer strong {
+      color: #fff;
+    }
+
+    footer mark {
+      background: #ecc94b;
+      color: #1a202c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    /* --- Responsive Fix for Mobile Screens --- */
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      .Menu-bar nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .botton-section div:nth-child(2) {
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
+
 <body>
-    <header>
-      <div>
-        <p class='resume-p1'>NSTI-National Skill Training Institute, Mumbai</p>
-        <p class='resume-p2'>Trainee : <strong>Sandeep Pal</strong> Trade & Roll No.
-          <strong>CSA-880</strong> || Training Officer- Mrs.Shulabha P.A.</p>
-      </div>
-      <hr>
-      <div class='Menu-bar'>
-        <nav>
-          <a href='#home'>Home</a>
-          <a href='#project'>My Projects</a>
-          <a href='#resume'>Make Your Resume</a>
-          <a href='#vision'>My Vision</a>
-          <a href='#other'>Other</a>
-        </nav>
-      </div>
-    </header>
+  <header>
+    <div>
+      <p class='resume-p1'>NSTI-National Skill Training Institute, Mumbai</p>
+      <p class='resume-p2'>Trainee : <strong>Sandeep Pal</strong> Trade & Roll No.
+        <strong>CSA-880</strong> || Training Officer- Mrs.Shulabha P.A.
+      </p>
+    </div>
+    <hr>
+    <div class='Menu-bar'>
+      <nav>
+        <a href='#home'>Home</a>
+        <a href='#project'>My Projects</a>
+        <a href='#resume'>Make Your Resume</a>
+        <a href='#vision'>My Vision</a>
+        <a href='#other'>Other</a>
+      </nav>
+    </div>
+  </header>
   <hr>
   <main>
-    
+
     <div class='main-heading'>
       <h1>RESUME</h1>
     </div>
     <section class='left-section'>
       <div>
-      <img src='pic.jpeg' alt='Profile Picture' style="height:10%; width:10%;">
+        <img src='pic.jpeg' alt='Profile Picture' style="height:10%; width:10%;">
         <p class='left-section-main-heading'><b><u>Sandeep Pal</u></b></p>
         <p class='contact-details'>
           <b><u>Mobile No : </u><br>9170792785</b><br><br>
@@ -43,13 +313,164 @@
           VILL Baraura POST Salamatpur <br>
           PS Kasimabad DIST Ghazipur (UP)
         </p>
-        <p class='career-objective'><hr>
+        <p class='career-objective'>
+          <hr>
           Secure a responsible career opportunity to fully utilize my
           talent and skills to grow, while makiing a significant contribution
           to the success of the company.
         </p>
       </div>
     </section>
+    <section class="right-right">
+      <table border="4" cellpadding="6" cellspacing="0">
+        <tr>
+          <th colspan="5">ACADEMIC QUALIFICATION</th>
+        </tr>
+        <tr>
+          <th>Exam Name</th>
+          <th>Board/University</th>
+          <th>Passing Year</th>
+          <th>Percentage of Marks</th>
+          <th>Division</th>
+        </tr>
+        <tr>
+          <td>High School</td>
+          <td>UP BOARD</td>
+          <td>2014</td>
+          <td>77.66%</td>
+          <td>First</td>
+        </tr>
+        <tr>
+          <td>Intermediate</td>
+          <td>UP BOARD</td>
+          <td>2016</td>
+          <td>68.80%</td>
+          <td>First</td>
+        </tr>
+        <tr>
+          <td>Graduation</td>
+          <td>VBSPU Jaunpur<br>UP</td>
+          <td>2019</td>
+          <td>52.77%</td>
+          <td>Second</td>
+        </tr>
+
+      </table>
+      <hr>
+      <table border="4" cellpadding="6" cellspacing="0">
+        <tr>
+          <th colspan="5">PROFESSIONAL QUALIFICATION</th>
+        </tr>
+        <tr>
+          <th>Exam Name</th>
+          <th>Board/University</th>
+          <th>Passing Year</th>
+          <th>Percentage of Marks</th>
+          <th>Division</th>
+        </tr>
+        <tr>
+          <td>BTC</td>
+          <td>PNP</td>
+          <td>2024</td>
+          <td>90.00%</td>
+          <td>First</td>
+        </tr>
+        <tr>
+          <td>ITI COPA(Computer Operator and Programing Assistant)</td>
+          <td>NCVT</td>
+          <td>2024</td>
+          <td>86.33%</td>
+          <td>First</td>
+        </tr>
+      </table>
+      <hr>
+
+      <table border="4" cellpadding="6" cellspacing="0">
+        <tr>
+          <th>PROFESSIONAL QUALIFICATION</th>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li type="circle">ADCA(Advance Diploma in Computer Application)</li>
+              <li type="circle"> CCC(Course on Computer Concepts)</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <hr>
+
+      <table border="4" cellpadding="6" cellspacing="0">
+        <tr>
+          <th>EXPERIENCE</th>
+        </tr>
+        <tr>
+          <td>Computer Typing Speed - @English : 30 wpm, @Hindi : 25 wpm </td>
+        </tr>
+      </table>
+      <hr>
+      <table border="4" cellpadding="6" cellspacing="0">
+        <tr>
+          <th colspan="2">PERSONAL DETAILS</th>
+        </tr>
+        <tr>
+          <th>Date of Birth</th>
+          <td>01-09-1998</td>
+        </tr>
+        <tr>
+          <th>Father's Name</th>
+          <td>RAMUGRAH PAL</td>
+        </tr>
+        <tr>
+          <th>Mother's Name</th>
+          <td>RAJMATI DEVI</td>
+        </tr>
+        <tr>
+          <th>Nationality</th>
+          <td>INDIAN</td>
+        </tr>
+        <tr>
+          <th>Marital Status</th>
+          <td>UNMARRIED</td>
+        </tr>
+        <tr>
+          <th>Language</th>
+          <td>HINDI,ENGLISH</td>
+        </tr>
+        <tr>
+          <th>Hobbies</th>
+          <td>TEACHING,SINGING</td>
+        </tr>
+      </table>
+      <hr>
+    </section>
+
+    <section class="botton-section">
+      <div>
+        <p><b><u>Declaration : <br></u></b>
+          I hereby declare that all the statement made in this resume aare true, complete and correct to the Knowledge.
+        </p>
+      </div>
+      <div>
+        <div>
+          <p class="date"><b>Date :</b></p>
+          <p class="place"><b>Place : </b>GHAZIPUR</p>
+        </div>
+        <div>
+          <h3><b>(SANDEEP PAL)</b></h3>
+        </div>
+      </div>
+    </section>
   </main>
+  <hr>
+  <footer>
+    <center>
+      <p class="copyright">&copy; Copyright 2026 || All rights are reserved.</p>
+      <p><mark>Developer : Sandeep Palji</mark></p>
+      <p>Contact Details - Mobile No : <strong>9170792785</strong> || Email Id : <strong>palji12122@gmail.com</strong>
+      </p>
+    </center>
+  </footer>
 </body>
+
 </html>
