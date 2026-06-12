@@ -1,0 +1,101 @@
+/* 1. Global Reset & Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* अब पैडिंग से बॉक्स का साइज नहीं बढ़ेगा */
+}
+
+body {
+  background-color: #f0f2f5; /* हल्का प्रोफेशनल ग्रे बैकग्राउंड */
+  color: #333;
+  font-family: 'Verdana', sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* 2. Heading Style */
+h1 {
+  color: #2e7d32; /* डार्क ग्रीन */ 
+  margin-bottom: 0px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+  max-width: 500px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0px 0px;
+}
+
+/* 3. Form Container */
+form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* सॉफ्ट शैडो */
+  width: 100%;
+  max-width: 450px; /* फॉर्म की चौड़ाई फिक्स की */
+}
+
+/* 4. Labels */
+.form-label {
+  display: block;  /* लेबल अपनी अलग लाइन लेगा */
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* 5. Input Fields */
+.form-input {
+  width: 100%; /* पूरी चौड़ाई */
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease; /* फोकस इफेक्ट के लिए */
+}
+
+.form-input:focus {
+  border-color: #2e7d32; /* फोकस करने पर ग्रीन बॉर्डर */
+  outline: none;
+}
+
+/* 6. Button Container (Flexbox) */
+form div {
+  display: flex;
+  gap: 10px; /* बटनों के बीच की दूरी */
+}
+
+/* 7. Button Common Styles */
+.btn-success, .btn-danger {
+  flex: 1; /* दोनों बटन बराबर चौड़ाई के होंगे */
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  color: white;
+}
+
+.btn-success {
+  background-color: #2e7d32;
+}
+
+.btn-danger {
+  background-color: #d32f2f;
+}
+
+/* Hover Effects */
+.btn-success:hover, .btn-danger:hover {
+  opacity: 0.9;
+  transform: translateY(-2px); /* हल्का सा ऊपर उठने वाला इफेक्ट */
+}

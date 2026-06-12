@@ -1,0 +1,150 @@
+/* 01. Universal Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: skyblue;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 02. Header & Positioning Fix */
+.main-header {
+    background: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    text-align: center;
+}
+
+.main-heading {
+    color: red;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.website {
+    background-color: navy;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* 03. Responsive Live Clock & NSTI Info */
+.current {
+    background-color: red;
+    color: white;
+    padding: 8px 15px;
+    border: 3px solid white;
+    border-radius: 15px 0 15px 0;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.nsti {
+    color: #2c3e50;
+    margin: 15px 0;
+}
+
+.nsti strong {
+    font-size: 20px;
+    color: #000;
+}
+
+/* डेस्कटॉप और लैंडस्केप के लिए पोजीशन सुधार */
+@media (min-width: 768px) {
+    .current {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        margin: 0;
+    }
+    .nsti {
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        text-align: right;
+        max-width: 40%;
+    }
+    .main-heading, .website {
+        text-align: left;
+        margin-left: 140px;
+    }
+}
+
+/* 04. Intro Box */
+.intro-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+    .intro-box {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #1a73e8;
+    object-fit: cover;
+}
+
+/* 05. Projects Section */
+.projects-section {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.project-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.project-nav a {
+    text-decoration: none;
+    color: #1a73e8;
+    padding: 8px 15px;
+    border: 1px solid #1a73e8;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.project-nav a:hover {
+    background: #1a73e8;
+    color: white;
+}
+
+/* 06. Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #444;
+}
